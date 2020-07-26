@@ -15,6 +15,8 @@ Issue with this however it doesn’t return location info that is categorized
 https://rapidapi.com/Noggle/api/reverse-geocoding-and-geolocation-service
 Try this one as it returns specifically ‘city’ and automatically returns the nearest 3 cities 
 http://www.geonames.org/export/web-services.html (find nearby populated place) 
+
+
 How to get to target location 
 Start with lat/lng of user -- ability to change it, otherwise default to NYC 
 Depending on direction and strength of wind, generate a target lat/lng 
@@ -23,6 +25,8 @@ NYC to SF is 2900 miles
 NYC to London is 3500 miles 
 NYC to HK is 8045 miles 
 NYC to BA is 5295 miles 
+
+
 Windspeed (darksky returns meters per second) 
 0 to 2 - calm to low - display local news + 50 miles 
 2 to 4 - light breeze - 100 miles  
@@ -32,6 +36,8 @@ Windspeed (darksky returns meters per second)
 13 to 17 - high wind - 2500 miles 
 17 to 20 - high wind / gale - 5000 miles 
 20 + - 8000 miles 
+
+
 Calculating new lat/lng
 NSEW - simply add x degrees (x = distance / 69)
 Finding A and B 
@@ -52,12 +58,18 @@ If 270 +
 Angle m = 360 - windBearing 
 New lat = lat + B 
 New lng = lng - A   
+
+
 City name of that lat/lng to be used as search term for news 
 What happens if in the middle of the ocean?? 
 Make presets? 
 News: https://newsapi.org/docs
+
+
 Search by city name 
 Use description, better (more contentful) than just title. Also display source name and author
+
+
 Display 
 Feed Parser - to make it scroll https://pythonhosted.org/feedparser/introduction.html#parsing-a-feed-from-a-string
 Flask?! Django? 
